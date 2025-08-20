@@ -1,0 +1,588 @@
+/* ==========================================================================
+   Xhuljan Sadiku — Portfolio
+   Updated base styles for the provided HTML (Bootstrap 5 compatible)
+   File: assets/css/style.css
+   ========================================================================== */
+
+/*---------------------------*/
+/* 1) ROOT / THEME TOKENS    */
+/*---------------------------*/
+:root{
+  /* Color system */
+  --brand: #6c5ce7;           /* primary accent */
+  --brand-600:#5b4fd1;
+  --brand-700:#4a41b7;
+  --brand-50:#f3f1ff;
+
+  --surface:#0f1221;          /* dark header/hero bg */
+  --surface-2:#131736;
+
+  --text:#111827;             /* body text */
+  --muted:#6b7280;            /* secondary text */
+  --border:#e5e7eb;           /* light border */
+
+  /* Effects */
+  --ring: 0 0 0 .25rem rgba(108,92,231,.35);
+  --shadow-sm: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-md: 0 10px 30px rgba(0,0,0,.12);
+  --blur: blur(10px);
+
+  /* Layout */
+  --radius: 1.25rem;
+  --radius-sm: .75rem;
+  --section-y: 4.5rem;
+  --section-y-lg: 6rem;
+}
+
+/* Smooth fonts */
+html{scroll-behavior:smooth}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* Utilities override */
+.text-secondary{color:var(--muted)!important}
+
+/*---------------------------*/
+/* 2) GLOBAL ELEMENTS        */
+/*---------------------------*/
+.section{
+  padding: var(--section-y) 0;
+}
+@media (min-width:992px){
+  .section{padding: var(--section-y-lg) 0}
+}
+
+.section-title{
+  font-weight: 800;
+  letter-spacing:.2px;
+  margin-bottom:1rem;
+}
+
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+}
+.card .card-title{font-weight:700}
+
+/* Links */
+a{
+  text-underline-offset: 2px;
+}
+a:hover{
+  text-decoration: none;
+}
+
+/* Badges */
+.badge.text-bg-light{
+  background: #fff!important;
+  border:1px solid var(--border)!important;
+}
+.skill-badge{
+  background: var(--brand-50);
+  color: var(--brand-700);
+  border:1px solid #e8e6ff;
+}
+
+/* Buttons — brand */
+.btn-brand{
+  --bs-btn-color:#fff;
+  --bs-btn-bg:var(--brand);
+  --bs-btn-border-color:var(--brand);
+  --bs-btn-hover-bg:var(--brand-600);
+  --bs-btn-hover-border-color:var(--brand-600);
+  --bs-btn-focus-shadow-rgb:108,92,231;
+  border-radius: calc(var(--radius) - .5rem);
+  padding:.625rem 1.1rem;
+  box-shadow: 0 6px 16px rgba(108,92,231,.25);
+}
+.btn-outline-brand{
+  --bs-btn-color:var(--brand);
+  --bs-btn-border-color:var(--brand);
+  --bs-btn-hover-bg:var(--brand);
+  --bs-btn-hover-border-color:var(--brand);
+  --bs-btn-hover-color:#fff;
+  border-radius: calc(var(--radius) - .5rem);
+}
+
+/* Focus ring */
+.btn:focus, .form-control:focus, .form-select:focus{
+  box-shadow: var(--ring);
+  border-color: var(--brand-600);
+}
+
+/* Progress bars */
+.progress{
+  height:.6rem;
+  background:#f3f4f6;
+  border-radius:999px;
+  overflow:hidden;
+}
+.progress-bar{
+  background:linear-gradient(90deg, var(--brand) 0%, var(--brand-600) 100%);
+}
+
+/*---------------------------*/
+/* 3) NAVBAR / HEADER        */
+/*---------------------------*/
+#mainNav{
+  background: rgba(15,18,33,.75);
+  backdrop-filter: var(--blur);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+#mainNav .navbar-brand{
+  letter-spacing:.3px;
+}
+#mainNav .nav-link{
+  color: #e5e7eb;
+  opacity:.9;
+}
+#mainNav .nav-link:hover,
+#mainNav .nav-link.active{
+  color:#fff;
+}
+
+/*---------------------------*/
+/* 4) HERO                   */
+/*---------------------------*/
+#hero{
+  background: radial-gradient(1200px 500px at 10% 10%, rgba(108,92,231,.18), transparent 60%),
+              radial-gradient(900px 400px at 90% 30%, rgba(0,212,255,.14), transparent 60%),
+              var(--surface);
+  color:#eef2ff;
+  position:relative;
+  overflow:hidden;
+}
+.hero-underline{
+  text-decoration-thickness: .18em;
+  text-decoration-color: rgba(255,255,255,.6);
+}
+.lead-muted{color:#c7cbe6}
+
+/* Avatar */
+.avatar-img{
+  box-shadow: 0 18px 50px rgba(0,0,0,.35), 0 0 0 8px rgba(255,255,255,.06);
+}
+
+/* CTA group spacing on small screens */
+@media (max-width:991.98px){
+  #hero .btn{width:100%}
+}
+
+/*---------------------------*/
+/* 5) ABOUT                  */
+/*---------------------------*/
+#about .card{
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+#about .card:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Info alert */
+#about .alert{
+  border-radius: var(--radius);
+}
+
+/* ============================
+   Tech Stack — Modern Cards v2
+   ============================ */
+
+/* Ngjyra për kategori */
+:root{
+  --cat-lang:#7c3aed;      /* violet */
+  --cat-markup:#0891b2;    /* cyan */
+  --cat-fe:#2563eb;        /* blue */
+  --cat-be:#ea580c;        /* orange */
+  --cat-tools:#16a34a;     /* green */
+}
+
+/* Kontejneri i seksioneve (mini-cards) */
+.stack-section{
+  position: relative;
+  padding: 1.1rem 1rem .9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+.stack-section + .stack-section{ margin-top: 1rem; }
+
+/* “Ribbon” me gradient sipër */
+.stack-section::before{
+  content:"";
+  position:absolute; inset:0 0 auto 0; height:4px;
+  background: linear-gradient(90deg, rgba(0,0,0,.05), rgba(0,0,0,0));
+}
+
+/* Titulli i seksionit */
+.stack-heading{
+  font-weight: 800;
+  font-size: .85rem;
+  text-align: center;
+  margin: 0 0 .9rem;
+  text-transform: uppercase;
+  letter-spacing:.06em;
+  color: #111827;
+}
+
+/* Gridi i ikonave */
+.tech-icons{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: .9rem;
+  align-items: stretch;
+}
+.tech-icon{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:.45rem;
+  padding:.75rem .6rem;
+  border-radius: calc(var(--radius) - .6rem);
+  background:#fff;
+  border:1px solid var(--border);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+}
+.tech-icon i{ font-size: 1.9rem; line-height:1 }
+.tech-icon span{ font-size:.88rem; font-weight:700; color:#374151 }
+
+/* Hover states */
+.stack-section:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); border-color:#e3e6f4 }
+.tech-icon:hover{
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, #fff, #f9faff);
+  box-shadow: 0 6px 20px rgba(16,24,40,.08);
+  border-color:#e1e5f6;
+}
+
+/* Variacione me ngjyra për kategori (ribbon + heading) */
+.stack-section.lang::before{ background: linear-gradient(90deg, var(--cat-lang), transparent) }
+.stack-section.markup::before{ background: linear-gradient(90deg, var(--cat-markup), transparent) }
+.stack-section.fe::before{ background: linear-gradient(90deg, var(--cat-fe), transparent) }
+.stack-section.be::before{ background: linear-gradient(90deg, var(--cat-be), transparent) }
+.stack-section.tools::before{ background: linear-gradient(90deg, var(--cat-tools), transparent) }
+
+.stack-section.lang .stack-heading{ color: var(--cat-lang) }
+.stack-section.markup .stack-heading{ color: var(--cat-markup) }
+.stack-section.fe .stack-heading{ color: var(--cat-fe) }
+.stack-section.be .stack-heading{ color: var(--cat-be) }
+.stack-section.tools .stack-heading{ color: var(--cat-tools) }
+
+/* Spacing i lehtë në About (opsionale) */
+#about p.text-secondary{ margin-bottom: .9rem }
+
+/* Tooltips pak më të mëdha */
+.tooltip .tooltip-inner{ padding:.45rem .6rem; font-weight:600; }
+
+/* Dark mode */
+[data-theme="dark"] .stack-section{
+  background: var(--surface-2);
+  border-color:#1a1d33;
+}
+[data-theme="dark"] .tech-icon{
+  background: #0f1329;
+  border-color:#1a1d33;
+}
+[data-theme="dark"] .tech-icon span{ color:#e5e7eb }
+[data-theme="dark"] .stack-section:hover{ border-color:#262c55 }
+
+/* Compact Tech Stack */
+.stack-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.stack-row:last-child { border-bottom: none; }
+
+.stack-heading {
+  font-weight: 600;
+  font-size: .9rem;
+  margin: 0;
+  color: var(--text);
+  flex: 0 0 45%;
+}
+
+.stack-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1;
+}
+.stack-icons i {
+  font-size: 2.4rem;   
+  transition: transform .2s ease;
+}
+.stack-icons i:hover {
+  transform: scale(1.25);
+}
+
+/* Dark mode */
+[data-theme="dark"] .stack-row { border-color:#1a1d33 }
+
+ 
+
+/*---------------------------*/
+/* 6) EDUCATION (timeline)   */
+/*---------------------------*/
+.timeline{
+  position:relative;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.4rem;
+  bottom:.4rem;
+  width:2px;
+  background:linear-gradient(to bottom, var(--brand-50), var(--border));
+}
+@media (min-width:992px){
+  .timeline{padding-left:1.5rem}
+  .timeline::before{left:.25rem}
+}
+.timeline-item{
+  position:relative;
+  padding-left:1.25rem;
+}
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-.25rem;
+  top:.5rem;
+  width:.75rem;height:.75rem;
+  border-radius:999px;
+  background:var(--brand);
+  box-shadow:0 0 0 4px var(--brand-50);
+}
+
+/*---------------------------*/
+/* 7) EXPERIENCE             */
+/*---------------------------*/
+#experience .card{
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+#experience .card:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color:#dfe3f3;
+}
+#experience .badge{
+  font-weight:600;
+}
+
+/* Experience polish */
+.exp-badge{
+  font-size: .75rem;
+  padding: .35rem .6rem;
+}
+.exp-list{
+  list-style: none;
+  padding-left: 0;
+}
+.exp-list li{
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+  margin-bottom: .5rem;
+}
+.exp-list li i{ margin-top: .15rem; }
+
+/* pak më kompakte në mobile */
+@media (max-width: 576px){
+  .exp-badge{ font-size: .7rem; }
+  #experience .card-body{ padding: 1rem; }
+}
+
+
+/*---------------------------*/
+/* 8) PROJECTS + FILTERS     */
+/*---------------------------*/
+#projects .btn-group .btn{
+  border-radius:999px!important;
+  padding:.35rem .8rem;
+}
+#projects .btn-group .btn.active{
+  background:var(--brand);
+  color:#fff;
+  border-color:var(--brand);
+}
+
+#projects .card{
+  overflow:hidden;
+}
+#projects .card .ratio{
+  background:#0b0f2a;
+}
+#projects .card img{
+  transition: transform .4s ease, filter .4s ease;
+}
+#projects .card:hover img{
+  transform: scale(1.05);
+  filter:saturate(1.05);
+}
+#projects .card-footer{
+  background:#fff!important;
+  border-top:1px solid var(--border);
+}
+
+/* Responsive 2/3 cols spacing handled by Bootstrap grid */
+
+/*---------------------------*/
+/* 9) SKILLS                 */
+/*---------------------------*/
+#skills .card{
+  border-radius: var(--radius);
+}
+
+/* Skill tiles */
+.skill-tile{
+  border: 1px solid var(--border);
+  border-radius: .8rem;
+  padding: .9rem .8rem;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.skill-tile:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #e3e6f4;
+}
+.tile-title{
+  font-weight: 700;
+  font-size: .85rem;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: #374151;
+}
+.tile-icons{
+  display: flex;
+  gap: .9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tile-icons i{
+  font-size: 2rem; /* madhësia e ikonave */
+  line-height: 1;
+}
+
+/* Soft badges */
+.badge.soft{
+  background: #f1f0ff;
+  color: #4f46e5;
+  border: 1px solid #e5e7ff;
+  font-weight: 600;
+}
+
+/* Dark mode */
+[data-theme="dark"] .skill-tile{ background: var(--surface-2); border-color:#1a1d33 }
+[data-theme="dark"] .tile-title{ color:#e5e7eb }
+[data-theme="dark"] .badge.soft{ background:#1c1f3a; color:#a5b4fc; border-color:#2a2e55 }
+
+
+/*---------------------------*/
+/* 10) CONTACT + FORM        */
+/*---------------------------*/
+#contact .card{
+  border-radius: var(--radius);
+}
+.form-control{
+  border-radius: .9rem;
+}
+.form-control::placeholder{color:#9aa1b2}
+.form-control.is-invalid, .was-validated .form-control:invalid{
+  border-color:#ef4444;
+}
+.invalid-feedback{
+  font-size:.85rem;
+}
+
+/* Toast (already green via .text-bg-success) */
+.toast{
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+/*---------------------------*/
+/* 11) BACK TO TOP           */
+/*---------------------------*/
+#backToTop{
+  position:fixed;
+  right:1rem; bottom:1.25rem;
+  display:none;
+  z-index:1080;
+  background:var(--brand);
+  border-color:var(--brand);
+}
+#backToTop.show{display:inline-flex}
+#backToTop:hover{background:var(--brand-600);border-color:var(--brand-600)}
+
+/*---------------------------*/
+/* 12) FOOTER                */
+/*---------------------------*/
+footer{
+  color:var(--muted);
+}
+footer a{color:var(--brand-700)}
+footer a:hover{color:var(--brand)}
+
+/*---------------------------*/
+/* 13) ACCESSIBILITY         */
+/*---------------------------*/
+:focus-visible{
+  outline: 3px solid rgba(108,92,231,.55);
+  outline-offset:2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important; transition:none!important; scroll-behavior:auto!important}
+}
+
+/*---------------------------*/
+/* 14) DARK MODE (optional)  */
+/*   Activate by adding      */
+/*   data-theme="dark" on    */
+/*   <html> or <body>        */
+/*---------------------------*/
+[data-theme="dark"]{
+  --text:#e5e7eb;
+  --muted:#aab0c0;
+  --border:#23263a;
+  --surface:#0c0f1f;
+  --surface-2:#0f1226;
+  background: var(--surface);
+  color: var(--text);
+}
+[data-theme="dark"] #mainNav{
+  background: rgba(10,12,22,.75);
+  border-color:#151833;
+}
+[data-theme="dark"] .card{background:var(--surface-2); border-color:#1a1d33}
+[data-theme="dark"] .badge.text-bg-light{background:#0f1329!important; border-color:#1e244a!important}
+[data-theme="dark"] #projects .card-footer{background:var(--surface-2)!important; border-top-color:#1a1d33}
+[data-theme="dark"] .progress{background:#12162c}
+[data-theme="dark"] footer a{color:#a8b0ff}
+
+/*---------------------------*/
+/* 15) PRINT STYLES          */
+/*---------------------------*/
+@media print{
+  #mainNav, #backToTop, .btn, .toast, .alert{display:none!important}
+  body{background:#fff;color:#000}
+  a{text-decoration:none;color:#000}
+  .card{box-shadow:none;border:1px solid #ccc}
+  .section{padding:2rem 0}
+}

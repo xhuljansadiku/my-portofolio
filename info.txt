@@ -1,0 +1,59 @@
+1. Faqja Kryesore (Home / About Me)
+
+Emri: Xhuljan Sadiku
+
+Profesioni aktual: Në proces Umschulung për Fachinformatiker für Anwendungsentwicklung
+
+Një bio e shkurtër: P.sh. kush je, çfarë motivimi ke për IT dhe zhvillimin e aplikacioneve.
+
+2. Edukimi & Trajnimet
+
+08/2023 – 07/2025 → Kolping Bildungswerk Weiden – Umschulung: Fachinformatiker für Anwendungsentwicklung
+
+10/2022 – 08/2023 → KSZ Weiden – Deutschkurs
+
+Shkollë e mesme → Abitur, Tirana
+
+3. Përvoja Profesionale
+
+Edhe pse shumica e përvojave të tua janë jashtë IT-së, mund t’i vendosësh si shkathtësi të fituara (teamwork, përgjegjësi, komunikim).
+
+2021 – 2022 → Ecolog Deutschland GmbH, Administrator
+
+2018 – 2020 → Gillis Ställningar AB, Gerüstbauer
+
+2015 – 2018 → Skorstensbolaget AB, Schornsteinabdichtung
+
+2013 – 2015 → Bar West, Tirana – Kellner
+
+4. Projektet (IT Projects)
+
+Edhe pse në CV nuk ka projekte konkrete, këtu mund të shtosh:
+
+Projekte nga kursi i Umschulung (p.sh. aplikacione Java, një projekt me Django, një aplikacion todo me JavaScript/React, një faqe me Bootstrap).
+
+Projekte personale (nëse ke ndonjë që mund ta ngarkosh në GitHub).
+
+⚡ Këshillë: Edhe një projekt i thjeshtë (p.sh. një blog me Django, një todo app me JavaScript, ose një faqe responsive me Bootstrap) është i vlefshëm.
+
+5. Aftësitë (Skills)
+
+Gjuhë Programimi: Java, JavaScript, Python, .NET (Blazor), Django, Bootstrap
+
+Databaza: SQL – Postgres
+
+Tools: Docker, Git, Cisco
+
+OS: Ubuntu (Linux), Windows
+
+Gjuhë: Shqip (C1), Anglisht (B2), Gjermanisht (B1), Suedisht (A2)
+
+6. Kontakt
+
+Email: xsadiku@hotmail.com
+
+Tel: 0170 9577801
+
+Vendndodhja: Weiden i.d.Opf
+
+Opsionale: LinkedIn + GitHub (shumë e rëndësishme për IT portfolio)
