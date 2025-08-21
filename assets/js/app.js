@@ -8,26 +8,68 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------------
   // 1) NAVBAR: active link on scroll
   // ----------------------------
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll("#mainNav .nav-link");
+const navLinks = Array.from(document.querySelectorAll("#mainNav .nav-link"));
 
-  function activateNav() {
-    let scrollY = window.pageYOffset;
-    sections.forEach((sec) => {
-      const sectionTop = sec.offsetTop - 120; // offset for navbar
-      const sectionHeight = sec.offsetHeight;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        const id = sec.getAttribute("id");
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${id}`) {
-            link.classList.add("active");
-          }
-        });
-      }
-    });
+// nxjerr elementët target sipas href (#id)
+const targets = navLinks
+  .map(l => {
+    const hash = l.getAttribute("href") || "";
+    if (!hash.startsWith("#")) return null;
+    const el = document.getElementById(hash.slice(1));
+    return el ? { id: el.id, el } : null;
+  })
+  .filter(Boolean);
+
+// offset dinamik për navbar-in (ndrysho nëse ke një vlerë fikse)
+const nav = document.querySelector("#mainNav");
+const getOffset = () => (nav ? nav.offsetHeight + 12 : 100);
+
+function setActive(id) {
+  navLinks.forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+  });
+}
+
+function activateNav() {
+  const y = window.pageYOffset + getOffset();
+
+  // gjej seksionin i cili mbulon pozicionin aktual
+  let current = null;
+  for (const t of targets) {
+    const top = t.el.offsetTop;
+    const bottom = top + t.el.offsetHeight;
+    if (y >= top && y < bottom) {
+      current = t.id;
+      break;
+    }
   }
-  window.addEventListener("scroll", activateNav);
+
+  // fallback: në krye → i pari
+  if (!current && targets.length) {
+    if (window.pageYOffset < targets[0].el.offsetTop) {
+      current = targets[0].id;
+    } else {
+      // ose mer i fundit që kaluam
+      const passed = targets.filter(t => y >= t.el.offsetTop);
+      if (passed.length) current = passed[passed.length - 1].id;
+    }
+  }
+
+  if (current) setActive(current);
+}
+
+window.addEventListener("scroll", activateNav, { passive: true });
+window.addEventListener("resize", activateNav, { passive: true });
+document.addEventListener("DOMContentLoaded", activateNav);
+
+// aktivizo menjëherë kur klikon një link
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    const hash = link.getAttribute("href");
+    if (hash?.startsWith("#")) setActive(hash.slice(1));
+  });
+});
+
 
   // ----------------------------
   // 2) BACK TO TOP
