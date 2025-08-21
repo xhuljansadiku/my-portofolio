@@ -27,6 +27,8 @@
 <link href="assets/css/style.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
 
 
 
@@ -327,7 +329,7 @@
               <div class="card-body d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-start gap-2 flex-wrap">
                   <h5 class="card-title mb-0">Bootcamp – Full-Stack Web Developer</h5>
-                  <span class="badge rounded-pill text-bg-primary">2022–2023</span>
+                  <span class="badge rounded-pill text-bg-primary">10/2022 – 03/2023</span>
                 </div>
                 <div class="small mt-1">
                   <i class="bi bi-globe2 me-1 text-danger"></i>
@@ -348,7 +350,7 @@
               <div class="card-body d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-start gap-2 flex-wrap">
                   <h5 class="card-title mb-0">Retraining – IT Specialist in Application Development</h5>
-                  <span class="badge rounded-pill text-bg-primary">2023–2025</span>
+                  <span class="badge rounded-pill text-bg-primary">08/2023–07/2025</span>
                 </div>
                 <div class="small mt-1">
                   <i class="bi bi-geo-alt me-1 text-danger"></i>
@@ -386,7 +388,7 @@
     </div>
 
     <p class="text-secondary">
-      Një përzgjedhje projektesh personale dhe praktike. 
+      A selection of personal projects and practicals.
     </p>
 
     <!-- Grid -->
@@ -492,127 +494,64 @@
   </div>
 </section>
 
- 
-<!-- CONTACT (Modern Business) -->
-<section id="contact" class="contact section" aria-labelledby="contact-title">
-  <div class="container">
-    <h2 id="contact-title" class="contact__title">Contact</h2>
-    <p class="contact__lead">Got a project or role in mind? Send me a message and I’ll get back to you.</p>
+<!-- ===== CONTACT & FOOTER (Dark Business Look) ===== -->
+<section id="contact" class="contact-dark section">
+  <div class="container text-center">
+    <h2 class="contact-dark__title">Get in Touch</h2> <br>
+    <p class="contact-dark__lead">
+      Software Developer focused on clean UI, performance, and modern web solutions. <br>
+      Open to new opportunities, collaborations, and professional connections.
+    </p> 
 
-    <div class="contact__card">
-      <!-- Tip: for real submissions use method & action (e.g. Formspree) -->
-      <!-- <form method="POST" action="https://formspree.io/f/your-id" class="contact__form" novalidate> -->
-      <form id="contactForm" class="contact__form" novalidate>
-        <!-- Honeypot -->
-        <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <!-- Links -->
+    <div class="d-flex justify-content-center gap-2 mt-4">
+      <!-- + rel="noopener" te target="_blank" -->
+      <a class="btn btn-icon" href="https://github.com/xhuljansadiku" aria-label="GitHub" target="_blank" rel="noopener"><i class="bi bi-github"></i></a>
+      <a class="btn btn-icon" href="https://www.linkedin.com/in/xhuljansadiku" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+      <a class="btn btn-icon" href="mailto:xhuljansadiku@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+    </div>
+ <br>
 
-        <div class="form-grid">
-          <div class="field">
-            <input id="name" name="name" type="text" placeholder=" " required autocomplete="name" />
-            <label for="name">Full name *</label>
-            <span class="hint">Your real name, please.</span>
-          </div>
-
-          <div class="field">
-            <input id="email" name="email" type="email" placeholder=" " required autocomplete="email" />
-            <label for="email">Work email *</label>
-            <span class="hint">name@company.com</span>
-          </div>
-
-          <div class="field">
-            <input id="company" name="company" type="text" placeholder=" " autocomplete="organization" />
-            <label for="company">Company</label>
-          </div>
-
-          <div class="field">
-            <input id="subject" name="subject" type="text" placeholder=" " />
-            <label for="subject">Subject</label>
-          </div>
-
-          <div class="field field--full">
-            <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
-            <label for="message">Message *</label>
-            <span class="hint">Share a short brief, timeline, or any links.</span>
-          </div>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="btn btn--brand">
-            <span>Send message</span>
-          </button>
-          <button type="reset" class="btn btn--ghost">Reset</button>
-        </div>
-
-        <p class="contact__note">* Required fields. This is a demo — connect Formspree or your API to send.</p>
-      </form>
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <small>Copyright © <span id="year"></span> — Made by Xhuljan Sadiku</small>
+      <div class="website">
+        <a href="https://xhuljansadiku.dev" target="_blank" rel="noopener">xhuljansadiku.dev</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Back to top -->
-<button id="backToTop"
-        class="btn btn-brand rounded-circle p-3 shadow-sm position-fixed"
-        style="bottom: 20px; right: 20px; display: none; z-index: 1030;"
-        aria-label="Back to top">
-  <i class="bi bi-arrow-up fs-4" aria-hidden="true"></i>
+<button id="backToTop" class="btn-top" aria-label="Back to top">
+  <i class="bi bi-arrow-up"></i>
 </button>
 
-<!-- FOOTER -->
-<footer class="py-4 mt-5 bg-light border-top">
-  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3 text-center text-lg-start">
-    
-    <!-- Left -->
-    <div class="small">
-      © <span id="year"></span> Xhuljan Sadiku. All rights reserved.
-    </div>
-    
-    <!-- Right: social links -->
-    <div class="d-flex gap-3">
-      <a href="https://github.com/your-user" target="_blank" rel="noopener" aria-label="GitHub" class="text-secondary fs-5">
-        <i class="bi bi-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-secondary fs-5">
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a href="https://x.com/your-handle" target="_blank" rel="noopener" aria-label="X / Twitter" class="text-secondary fs-5">
-        <i class="bi bi-twitter-x"></i>
-      </a>
-    </div>
-  </div>
-</footer>
+<script>
+  // Year
+  document.getElementById("year").textContent = new Date().getFullYear();
 
+  // Back to top
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTop.style.display = window.scrollY > 250 ? "flex" : "none";
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 
-
-<!-- Toast (for the form) -->
-<div class="position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index: 1080">
-<div id="formToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
-<div class="d-flex">
-<div class="toast-body"><i class="bi bi-check2-circle me-2"></i>Message sent (demo). Thank you!</div>
-<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-</div>
-</div>
-</div>
-
-
-<!-- Bootstrap Bundle + your script -->
+<!-- Bootstrap Bundle + AOS + your script -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script src="assets/js/app.js" defer></script>
 
 <script>
-    // AOS init (animate on scroll)
-if (window.AOS) {
-  AOS.init({
-    once: true,           // animon vetëm herën e parë
-    duration: 600,        // ms
-    easing: 'ease-out',   // kurba
-    offset: 60            // distanca para se të nisë animimi
-  });
-}
-
-</script>
-
-<script>
+  // AOS init
+  if (window.AOS) {
+    AOS.init({ once: true, duration: 600, easing: 'ease-out', offset: 60 });
+  }
+  // Navbar shadow on scroll
   document.addEventListener('scroll', () => {
     const nav = document.getElementById('mainNav');
     if (!nav) return;

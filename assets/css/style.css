@@ -46,12 +46,21 @@
 ---------------------------*/
 html{scroll-behavior:smooth}
 body{
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   color:var(--text);
   background:var(--bg);
   line-height:1.65;
   font-weight:450;
 }
+
+h1,h2,h3,h4,h5,h6,
+.section-title,
+.hero-title,
+.card-title {
+  font-family: "Space Grotesk", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight:700;
+}
+
 :focus-visible{outline:2px solid var(--brand); outline-offset:3px; border-radius:8px;}
 .section{padding:var(--section-y) 0}
 @media (min-width:992px){.section{padding:var(--section-y-lg) 0}}
@@ -126,19 +135,7 @@ body{
 .navbar-nav .nav-link:focus-visible {
   color: var(--brand);
 }
-.navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(90deg, var(--brand-600), var(--brand));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform .25s;
-  border-radius: 2px;
-}
+ 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
   transform: scaleX(1);
@@ -778,224 +775,82 @@ body{
 /*---------------------------
   8) CONTACT & FOOTER  (#contact, footer)
 ---------------------------*/
-/* =============================
-   Contact — Modern Business UI
-   Self-contained, no JS needed
-   ============================= */
-#contact.contact {
-  --primary: #2563eb;
-  --primary-600: #1e40af;
-  --bg: #f8fafc;
-  --surface: #ffffff;
-  --border: #e2e8f0;
-  --text: #0f172a;
-  --muted: #64748b;
-  --radius: 16px;
-  --ring: 0 0 0 4px color-mix(in oklab, var(--primary) 22%, transparent);
-  --shadow-1: 0 8px 24px rgba(2,6,23,.06);
-  --shadow-2: 0 16px 40px rgba(2,6,23,.10);
-  font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  padding: clamp(48px, 7vw, 96px) 0;
+/* ===== Dark Business Contact & Footer ===== */
+:root {
+  --dark-bg: #0d1117;
+  --dark-text: #e6edf3;
+  --dark-muted: #8b949e;
+  --dark-accent: #58a6ff;
 }
 
-#contact .container { max-width: 980px; margin: 0 auto; padding: 0 16px; }
-
-.contact__title{
-  font-size: clamp(1.8rem, 2.6vw, 2.2rem);
-  font-weight: 900;
-  letter-spacing: .2px;
-  text-align: center;
-  margin: 0 0 .5rem;
-}
-.contact__lead{
-  text-align: center;
-  color: var(--muted);
-  max-width: 720px;
-  margin: 0 auto 1.6rem;
+.contact-dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  padding: clamp(60px, 8vw, 100px) 0;
 }
 
-.contact__card{
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-1);
-  padding: clamp(18px, 3vw, 28px);
-  transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
-}
-.contact__card:hover{
-  box-shadow: var(--shadow-2);
-  transform: translateY(-2px);
-  border-color: color-mix(in oklab, var(--primary) 24%, var(--border));
+.contact-dark__title {
+  font-size: clamp(1.8rem, 1.3rem + 1.5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.contact__form { display: block; }
-
-.hp { position: absolute !important; left: -5000px !important; opacity: 0 !important; }
-
-.form-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-@media (min-width: 768px){
-  .form-grid{
-    grid-template-columns: 1fr 1fr;
-  }
-  .field--full{ grid-column: 1 / -1; }
+.contact-dark__lead {
+  color: var(--dark-muted);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
-/* Floating label fields */
-.field{
-  position: relative;
+.contact-dark__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-dark__links a {
+  color: var(--dark-text);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: lowercase;
+  transition: color .2s ease;
+}
+.contact-dark__links a:hover {
+  color: var(--dark-accent);
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: var(--dark-muted);
   display: flex;
   flex-direction: column;
-  gap: 6px;
-}
-.field input,
-.field textarea{
-  width: 100%;
-  padding: 14px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #fff;
-  color: var(--text);
-  font: inherit;
-  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
-}
-.field textarea{ resize: vertical; min-height: 140px; }
-
-/* floating label */
-.field label{
-  position: absolute;
-  left: 12px;
-  top: 12px;
-  padding: 0 6px;
-  color: var(--muted);
-  background: #fff;
-  pointer-events: none;
-  transition: transform .18s ease, color .18s ease, top .18s ease, background .18s ease;
-}
-.field input:focus,
-.field textarea:focus{
-  border-color: var(--primary);
-  box-shadow: var(--ring);
-  outline: none;
-  background: #fff;
-}
-.field input:not(:placeholder-shown) + label,
-.field textarea:not(:placeholder-shown) + label,
-.field input:focus + label,
-.field textarea:focus + label{
-  top: -8px;
-  transform: translateY(-2px) scale(.92);
-  color: var(--primary);
-  background: #fff;
-}
-
-/* hints */
-.field .hint{
-  font-size: .8rem;
-  color: var(--muted);
-}
-
-/* invalid states (HTML5) */
-.field input:invalid[required],
-.field textarea:invalid[required]{
-  border-color: #3e31eb;
-}
-.field input:invalid[required]:focus,
-.field textarea:invalid[required]:focus{
-  box-shadow: 0 0 0 4px rgba(68, 99, 239, 0.15);
-}
-
-/* Actions */
-.form-actions{
-  display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 14px;
-  justify-content: flex-start;
-}
-
-/* Buttons */
-.btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   gap: .5rem;
-  padding: .8rem 1.2rem;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-weight: 700;
-  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
 }
-.btn:focus-visible{
-  outline: 3px solid color-mix(in oklab, var(--primary) 55%, transparent);
-  outline-offset: 3px;
+
+.footer-bottom a {
+  color: var(--dark-accent);
+  text-decoration: none;
+  font-weight: 500;
 }
-.btn--brand{
-  background: var(--primary);
-  border-color: var(--primary);
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Back to top */
+.btn-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 1030;
+  display: none;
+  width: 46px; height: 46px;
+  align-items: center; justify-content: center;
+  border: none; border-radius: 50%;
+  background: var(--dark-accent);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(37,99,235,.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+  transition: background .2s ease, transform .2s ease;
 }
-.btn--brand:hover{
-  background: var(--primary-600);
-  border-color: var(--primary-600);
-  transform: translateY(-1px);
-}
-.btn--ghost{
-  background: #fff;
-  border-color: var(--border);
-  color: var(--text);
-}
-.btn--ghost:hover{
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-/* Note */
-.contact__note{
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: .9rem;
-}
-
-/* Dark mode (optional if you toggle data-theme) */
-@media (prefers-color-scheme: dark){
-  #contact.contact{
-    --bg:#0f172a; --surface:#0b1220; --border:#1f2937; --text:#e5e7eb; --muted:#9aa4b2;
-  }
-  .field input, .field textarea{ background: #0f172a; color: var(--text); }
-  .field label{ background: #0b1220; }
-  .contact__card{ background: var(--surface); }
-}
-
- 
-
-/* === Remove active blue border/ring on focus === */
-#contact .field input:focus,
-#contact .field textarea:focus {
-  border-color: var(--border) !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-/* Opsionale: hiq edhe hover-in (nëse s’do ndryshim fare) */
-#contact .field input:hover,
-#contact .field textarea:hover {
-  border-color: var(--border) !important;
-}
-
-/* Opsionale: hiq ngjyrën e invalid state (të kuqen/blunë) */
-#contact .field input:invalid[required],
-#contact .field textarea:invalid[required] {
-  border-color: var(--border) !important;
-}
-#contact .field input:invalid[required]:focus,
-#contact .field textarea:invalid[required]:focus {
-  box-shadow: none !important;
-}
+.btn-top:hover { background: #2c82e2; transform: translateY(-2px); }
+.btn-top i { font-size: 1.2rem; pointer-events:none; }
