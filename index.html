@@ -36,57 +36,71 @@
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-smooth-scroll="true" tabindex="0">
 <!-- NAVBAR -->
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
-<div class="container">
-<a class="navbar-brand fw-bold" href="#hero"><i class="bi bi-code-square me-2"></i>XS</a>
-<button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse" data-bs-target="#navContent"
-        aria-controls="navContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#hero">
+      <i class="bi bi-code-square me-2"></i>XS
+    </a>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navContent"
+            aria-controls="navContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<div class="collapse navbar-collapse" id="navContent">
-<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-<li class="nav-item"><a class="nav-link" href="#hero">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-<li class="nav-item"><a class="nav-link" href="#edu-exp">Education / Experience</a></li>
-<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-</ul>
-</div>
-</div>
+    <div class="collapse navbar-collapse" id="navContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a class="nav-link" href="#hero"     data-i18n="nav.about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills"   data-i18n="nav.skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#edu-exp"  data-i18n="nav.eduExp">Education & Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact"  data-i18n="nav.contact">Contact</a></li>
+
+
+        <!-- Language Dropdown -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+     data-bs-toggle="dropdown" aria-expanded="false">
+    🌐 <span data-i18n="nav.language">Language</span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+    <li><a class="dropdown-item lang-switch" href="#" data-lang="en">English</a></li>
+    <li><a class="dropdown-item lang-switch" href="#" data-lang="de">Deutsch</a></li>
+  </ul>
+</li>
+
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<!-- HERO (No Photo, Ultra‑Modern) -->
+<!-- HERO (No Photo, Ultra-Modern) -->
 <header id="hero" class="hero-modern d-flex align-items-center min-vh-100">
   <div class="container text-center position-relative">
     <!-- ambient blobs -->
     <div class="hero-blob hero-blob-a"></div>
     <div class="hero-blob hero-blob-b"></div>
 
-  
-<h1 class="hero-title fw-bold mb-3 text-white">
-  Hi, I’m <span class="hero-highlight">Xhuljan Sadiku</span>
-</h1>
+    <h1 class="hero-title fw-bold mb-3 text-white" data-i18n="hero.titleHtml">
+      Hi, I’m <span class="hero-highlight">Xhuljan Sadiku</span>
+    </h1>
 
-<p class="lead text-white-50 mb-2">
-  Software Developer — Fachinformatiker für Anwendungsentwicklung
-</p>
+    <p class="lead text-white-50 mb-2" data-i18n="hero.subtitle">
+      Software Developer
+    </p>
 
-<p class="lead text-white-50 mx-auto mb-4 hero-copy">
-  I craft modern, scalable and user-focused applications. 
-  With a background in front-end development and application engineering, I focus on clean code, maintainable architectures 
-  and delivering seamless user experiences. Passionate about solving problems, learning new 
-  technologies and turning ideas into business-ready solutions.
-</p>
-
+    <p class="lead text-white-50 mx-auto mb-4 hero-copy" data-i18n="hero.description">
+      I craft modern, scalable and user-focused applications. 
+      With a background in front-end development and application engineering, I focus on clean code, maintainable architectures 
+      and delivering seamless user experiences. Passionate about solving problems, learning new 
+      technologies and turning ideas into business-ready solutions.
+    </p>
 
     <div class="d-flex flex-wrap gap-3 justify-content-center mt-3">
       <a href="#contact" class="btn btn-brand btn-lg d-inline-flex align-items-center gap-2">
-        <i class="bi bi-send"></i><span>Contact</span>
+        <i class="bi bi-send"></i><span data-i18n="hero.contactBtn">Contact</span>
       </a>
       <a href="assets/cv.pdf" download class="btn btn-outline-brand btn-lg d-inline-flex align-items-center gap-2">
-        <i class="bi bi-file-earmark-arrow-down"></i><span>Download CV</span>
+        <i class="bi bi-file-earmark-arrow-down"></i><span data-i18n="hero.downloadBtn">Download CV</span>
       </a>
     </div>
 
@@ -94,138 +108,69 @@
       <a class="btn btn-icon" href="https://github.com/xhuljansadiku" aria-label="GitHub" target="_blank"><i class="bi bi-github"></i></a>
       <a class="btn btn-icon" href="https://www.linkedin.com/in/xhuljansadiku" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
       <a class="btn btn-icon" href="mailto:xhuljansadiku@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
-
     </div>
   </div>
 </header>
 
+
 <!-- SKILLS -->
 <section id="skills" class="section bg-white" data-aos="fade-up">
   <div class="container">
-    <h2 class="section-title mb-4 text-center">Skills</h2>
+    <h2 class="section-title mb-4 text-center" data-i18n="skills.title">Skills</h2>
 
     <div class="row g-4 justify-content-center">
 
-<!-- Tech Matrix -->
-<div class="col-12 col-lg-7">
-  <div class="card h-100 shadow-sm border-0 skills-card tech">
-    <div class="card-body">
-      <h5 class="card-title text-center mb-4">
-        <i class="bi bi-cpu me-2 text-info"></i>
-        <span class="fw-bold">Tech Matrix</span>
-      </h5>
-
-      <!-- Experienced -->
-      <div class="subcard mb-4">
-        <div class="subcard-title text-success">Experienced</div>
-        <div class="chips">
-          <span class="chip d-inline-flex align-items-center gap-2">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
-       alt="JavaScript" width="22" height="22">
-  <span>JavaScript</span>
-</span>
-
-          <span class="chip"><i class="devicon-html5-plain colored fs-5"></i> HTML5</span>
-          <span class="chip"><i class="devicon-css3-plain colored fs-5"></i> CSS3</span>
-          <span class="chip"><i class="devicon-vuejs-plain colored fs-5"></i> Vue.js</span>
-          <span class="chip"><i class="devicon-bootstrap-plain colored fs-5"></i> Bootstrap</span>
-          <span class="chip"><i class="devicon-postgresql-plain colored fs-5"></i> PostgreSQL</span>
-          <span class="chip"><i class="bi bi-database fs-6"></i> SQL</span>
-          <span class="chip"><i class="devicon-git-plain colored fs-5"></i> Git / GitHub</span>
-        </div>
-      </div>
-
-      <!-- Familiar With -->
-      <div class="subcard">
-        <div class="subcard-title text-muted">Familiar With</div>
-        <div class="chips">
-          <span class="chip"><i class="devicon-java-plain colored fs-5"></i> Java</span>
-          <span class="chip d-inline-flex align-items-center gap-2">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
-       alt="Python" width="22" height="22">
-  <span>Python</span>
-</span>
-
-          <span class="chip d-inline-flex align-items-center gap-2">
-  <i class="devicon-nodejs-plain colored fs-5"></i>
-  <span>Node.js</span>
-</span>
-
-          <span class="chip"><i class="devicon-dotnetcore-plain colored fs-5"></i> .NET Core</span>
-          <span class="chip"><i class="devicon-django-plain colored fs-5"></i> Django</span>
-          <span class="chip"><i class="devicon-docker-plain colored fs-5"></i> Docker</span>
-          <span class="chip d-inline-flex align-items-center gap-2">
-  <i class="bi bi-bag-check-fill text-success fs-5"></i>
-  <span>Shopify</span>
-</span>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-        <!-- Soft Skills & Tools -->
-      <div class="col-12 col-lg-5">
-        <div class="card h-100 shadow-sm border-0 skills-card soft">
-          <div class="card-body d-flex flex-column">
+      <!-- Tech Matrix -->
+      <div class="col-12 col-lg-7">
+        <div class="card h-100 shadow-sm border-0 skills-card tech">
+          <div class="card-body">
             <h5 class="card-title text-center mb-4">
-              <i class="bi bi-people me-2 text-info"></i>
-              <span class="fw-bold">Soft Skills &amp; Tools</span>
+              <i class="bi bi-cpu me-2 text-info"></i>
+              <span class="fw-bold" data-i18n="skills.techMatrix">Tech Matrix</span>
             </h5>
 
-            <!-- Soft skills chips -->
-            <div class="mb-3 text-center">
-              <div class="soft-badges d-flex flex-wrap justify-content-center gap-2">
-                <span class="badge rounded-pill soft">Communication</span>
-                <span class="badge rounded-pill soft">Teamwork</span>
-                <span class="badge rounded-pill soft">Time Management</span>
-             <span class="badge rounded-pill soft">Problem‑Solving</span>
-                <span class="badge rounded-pill soft">Adaptability</span>
+            <!-- Experienced -->
+            <div class="subcard mb-4">
+              <div class="subcard-title text-success" data-i18n="skills.experienced">Experienced</div>
+              <div class="chips">
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="22" height="22">
+                  <span data-i18n="skills.items.javascript">JavaScript</span>
+                </span>
+
+                <span class="chip"><i class="devicon-html5-plain colored fs-5"></i> <span data-i18n="skills.items.html5">HTML5</span></span>
+                <span class="chip"><i class="devicon-css3-plain colored fs-5"></i> <span data-i18n="skills.items.css3">CSS3</span></span>
+                <span class="chip"><i class="devicon-vuejs-plain colored fs-5"></i> <span data-i18n="skills.items.vue">Vue.js</span></span>
+                <span class="chip"><i class="devicon-bootstrap-plain colored fs-5"></i> <span data-i18n="skills.items.bootstrap">Bootstrap</span></span>
+                <span class="chip"><i class="devicon-postgresql-plain colored fs-5"></i> <span data-i18n="skills.items.postgresql">PostgreSQL</span></span>
+                <span class="chip"><i class="bi bi-database fs-6"></i> <span data-i18n="skills.items.sql">SQL</span></span>
+                <span class="chip"><i class="devicon-git-plain colored fs-5"></i> <span data-i18n="skills.items.git">Git / GitHub</span></span>
               </div>
             </div>
- 
 
-            <!-- Tools -->
-            <div class="mt-auto text-center">
-              <div class="d-flex flex-wrap justify-content-center gap-3">
-
-             <span class="chip d-inline-flex align-items-center gap-2">
-  <img src="https://www.svgrepo.com/show/354202/postman-icon.svg" 
-       alt="Postman" width="22" height="22">
-  <span>Postman</span>
-</span>
-
-
+            <!-- Familiar With -->
+            <div class="subcard">
+              <div class="subcard-title text-muted" data-i18n="skills.familiar">Familiar With</div>
+              <div class="chips">
+                <span class="chip"><i class="devicon-java-plain colored fs-5"></i> <span data-i18n="skills.items.java">Java</span></span>
 
                 <span class="chip d-inline-flex align-items-center gap-2">
-                  <i class="devicon-jira-plain colored fs-4" aria-hidden="true"></i><span>Jira</span>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="22" height="22">
+                  <span data-i18n="skills.items.python">Python</span>
                 </span>
 
                 <span class="chip d-inline-flex align-items-center gap-2">
-                  <i class="devicon-confluence-plain colored fs-4" aria-hidden="true"></i><span>Confluence</span>
+                  <i class="devicon-nodejs-plain colored fs-5"></i>
+                  <span data-i18n="skills.items.node">Node.js</span>
                 </span>
 
-                <span class="chip d-inline-flex align-items-center gap-2">
-                  <i class="devicon-vscode-plain colored fs-4" aria-hidden="true"></i><span>VS Code</span>
-                </span>
+                <span class="chip"><i class="devicon-dotnetcore-plain colored fs-5"></i> <span data-i18n="skills.items.dotnet">.NET Core</span></span>
+                <span class="chip"><i class="devicon-django-plain colored fs-5"></i> <span data-i18n="skills.items.django">Django</span></span>
+                <span class="chip"><i class="devicon-docker-plain colored fs-5"></i> <span data-i18n="skills.items.docker">Docker</span></span>
 
                 <span class="chip d-inline-flex align-items-center gap-2">
-                  <i class="devicon-pycharm-plain colored fs-4" aria-hidden="true"></i><span>PyCharm</span>
-                </span>
-
-                <span class="chip d-inline-flex align-items-center gap-2">
-                  <i class="devicon-intellij-plain colored fs-4" aria-hidden="true"></i><span>IntelliJ IDEA</span>
-                </span>
-
-                <span class="chip d-inline-flex align-items-center gap-2">
-                  <i class="devicon-visualstudio-plain colored fs-4" aria-hidden="true"></i><span>Visual Studio</span>
-                </span>
-
-                <span class="chip d-inline-flex align-items-center gap-2">
-                  <i class="devicon-figma-plain colored fs-4" aria-hidden="true"></i><span>Figma</span>
+                  <i class="bi bi-bag-check-fill text-success fs-5"></i>
+                  <span data-i18n="skills.items.shopify">Shopify</span>
                 </span>
 
               </div>
@@ -234,9 +179,66 @@
           </div>
         </div>
       </div>
+
+      <!-- Soft Skills & Tools -->
+      <div class="col-12 col-lg-5">
+        <div class="card h-100 shadow-sm border-0 skills-card soft">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-center mb-4">
+              <i class="bi bi-people me-2 text-info"></i>
+              <span class="fw-bold" data-i18n="skills.softTitle">Soft Skills &amp; Tools</span>
+            </h5>
+
+            <!-- Soft skills chips -->
+            <div class="mb-3 text-center">
+              <div class="soft-badges d-flex flex-wrap justify-content-center gap-2">
+                <span class="badge rounded-pill soft" data-i18n="soft.communication">Communication</span>
+                <span class="badge rounded-pill soft" data-i18n="soft.teamwork">Teamwork</span>
+                <span class="badge rounded-pill soft" data-i18n="soft.time">Time Management</span>
+                <span class="badge rounded-pill soft" data-i18n="soft.problem">Problem‑Solving</span>
+                <span class="badge rounded-pill soft" data-i18n="soft.adaptability">Adaptability</span>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="mt-auto text-center">
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <img src="https://www.svgrepo.com/show/354202/postman-icon.svg" alt="Postman" width="22" height="22">
+                  <span>Postman</span>
+                </span>
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <i class="devicon-jira-plain colored fs-4" aria-hidden="true"></i><span>Jira</span>
+                </span>
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <i class="devicon-confluence-plain colored fs-4" aria-hidden="true"></i><span>Confluence</span>
+                </span>
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <i class="devicon-vscode-plain colored fs-4" aria-hidden="true"></i><span>VS Code</span>
+                </span>
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <i class="devicon-pycharm-plain colored fs-4" aria-hidden="true"></i><span>PyCharm</span>
+                </span>
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <i class="devicon-intellij-plain colored fs-4" aria-hidden="true"></i><span>IntelliJ IDEA</span>
+                </span>
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <i class="devicon-visualstudio-plain colored fs-4" aria-hidden="true"></i><span>Visual Studio</span>
+                </span>
+                <span class="chip d-inline-flex align-items-center gap-2">
+                  <i class="devicon-figma-plain colored fs-4" aria-hidden="true"></i><span>Figma</span>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- Edu-Exp -->
 <section id="edu-exp" class="section" data-aos="fade-up">
@@ -245,7 +247,7 @@
 
       <!-- Experience -->
       <div class="col-12 col-lg-6">
-        <h2 class="section-title mb-4 text-center text-lg-center">Experience</h2>
+        <h2 class="section-title mb-4 text-center text-lg-center" data-i18n="eduExp.experienceTitle">Experience</h2>
 
         <div class="row row-cols-1 g-4">
 
@@ -254,18 +256,18 @@
             <article class="card shadow-sm w-100 h-100">
               <div class="card-body d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-start gap-2 flex-wrap">
-                  <h5 class="card-title mb-0">Application Development Intern</h5>
+                  <h5 class="card-title mb-0" data-i18n="eduExp.jobs.job1.title">Application Development Intern</h5>
                   <span class="badge rounded-pill text-bg-primary exp-badge">05/2025 — 07/2025</span>
                 </div>
                 <div class="small mt-1">
                   <i class="bi bi-geo-alt me-1 text-danger"></i>
-                  Janner Waagen GmbH – Weiden, Germany
+                  <span data-i18n="eduExp.jobs.job1.company">Janner Waagen GmbH – Weiden, Germany</span>
                 </div>
                 <ul class="small text-secondary mt-3 mb-0 exp-list">
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Enhanced internal web apps using Vue.js &  Bootstrap</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Created and optimized reports & queries with SQL/PostgreSQL</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Worked hands-on with Git/GitHub and Docker</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Supported Agile sprints, testing, and QA</li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job1.point1">Enhanced internal web apps using Vue.js & Bootstrap</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job1.point2">Created and optimized reports & queries with SQL/PostgreSQL</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job1.point3">Worked hands-on with Git/GitHub and Docker</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job1.point4">Supported Agile sprints, testing, and QA</span></li>
                 </ul>
               </div>
             </article>
@@ -276,18 +278,18 @@
             <article class="card shadow-sm w-100 h-100">
               <div class="card-body d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-start gap-2 flex-wrap">
-                  <h5 class="card-title mb-0">Application Development Intern</h5>
+                  <h5 class="card-title mb-0" data-i18n="eduExp.jobs.job2.title">Application Development Intern</h5>
                   <span class="badge rounded-pill text-bg-primary exp-badge">10/2024 — 03/2025</span>
                 </div>
                 <div class="small mt-1">
                   <i class="bi bi-geo-alt me-1 text-danger"></i>
-                  Ziegler Group GmbH – Plößberg, Germany
+                  <span data-i18n="eduExp.jobs.job2.company">Ziegler Group GmbH – Plößberg, Germany</span>
                 </div>
                 <ul class="small text-secondary mt-3 mb-0 exp-list">
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Contributed to  Vue.js & .NET Blazor projects</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Participated in Agile Scrum: stand-ups & sprint planning</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Developed and integrated REST APIs</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Developed dashboards for system performance monitoring</li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job2.point1">Contributed to Vue.js & .NET Blazor projects</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job2.point2">Participated in Agile Scrum: stand-ups & sprint planning</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job2.point3">Developed and integrated REST APIs</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job2.point4">Developed dashboards for system performance monitoring</span></li>
                 </ul>
               </div>
             </article>
@@ -298,17 +300,17 @@
             <article class="card shadow-sm w-100 h-100">
               <div class="card-body d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-start gap-2 flex-wrap">
-                  <h5 class="card-title mb-0">Administrator / IT Support</h5>
+                  <h5 class="card-title mb-0" data-i18n="eduExp.jobs.job3.title">Administrator / IT Support</h5>
                   <span class="badge rounded-pill text-bg-primary exp-badge">02/2021 — 07/2022</span>
                 </div>
                 <div class="small mt-1">
                   <i class="bi bi-geo-alt me-1 text-danger"></i>
-                  Ecolog Deutschland GmbH – Weiden
+                  <span data-i18n="eduExp.jobs.job3.company">Ecolog Deutschland GmbH – Weiden</span>
                 </div>
                 <ul class="small text-secondary mt-3 mb-0 exp-list">
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Managed administrative tasks and digital data systems</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Provided IT support and maintained technical documentation</li>
-                  <li><i class="bi bi-check2-circle me-2 text-primary"></i>Coordinated teams and supported COVID-19 operations</li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job3.point1">Managed administrative tasks and digital data systems</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job3.point2">Provided IT support and maintained technical documentation</span></li>
+                  <li><i class="bi bi-check2-circle me-2 text-primary"></i><span data-i18n="eduExp.jobs.job3.point3">Coordinated teams and supported COVID-19 operations</span></li>
                 </ul>
               </div>
             </article>
@@ -319,7 +321,7 @@
 
       <!-- Education -->
       <div class="col-12 col-lg-6">
-        <h2 class="section-title mb-4 text-center text-lg-center">Education</h2>
+        <h2 class="section-title mb-4 text-center text-lg-center" data-i18n="eduExp.educationTitle">Education</h2>
 
         <div class="row row-cols-1 g-4">
 
@@ -328,18 +330,13 @@
             <article class="card shadow-sm w-100 h-100">
               <div class="card-body d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-start gap-2 flex-wrap">
-                  <h5 class="card-title mb-0">Bootcamp – Full-Stack Development</h5>
+                  <h5 class="card-title mb-0" data-i18n="eduExp.education.bootcamp.title">Bootcamp – Full-Stack Development</h5>
                   <span class="badge rounded-pill text-bg-primary">10/2022 – 03/2023</span>
                 </div>
                 <div class="small mt-1">
                   <i class="bi bi-globe2 me-1 text-danger"></i>
-                  Per Programera – Online
+                  <span data-i18n="eduExp.education.bootcamp.school">Per Programera – Online</span>
                 </div>
-                <ul class="small text-secondary mt-3 mb-0">
-                  <li>Front-End: HTML5, CSS3, SCSS, Bootstrap, JavaScript, React</li>
-                  <li>Back-End: MySQL, PHP, Laravel, Python, Django</li>
-                  <li>Tools: Git</li>
-                </ul>
               </div>
             </article>
           </div>
@@ -349,22 +346,13 @@
             <article class="card shadow-sm w-100 h-100">
               <div class="card-body d-flex flex-column">
                 <div class="d-flex justify-content-between align-items-start gap-2 flex-wrap">
-                  <h5 class="card-title mb-0">Retraining - IT Specialist Application Development</h5>
+                  <h5 class="card-title mb-0" data-i18n="eduExp.education.umschulung.title">Retraining - IT Specialist Application Development</h5>
                   <span class="badge rounded-pill text-bg-primary">08/2023–07/2025</span>
                 </div>
                 <div class="small mt-1">
                   <i class="bi bi-geo-alt me-1 text-danger"></i>
-                  Kolping-Bildungswerk Ostbayern – Weiden, Germany
+                  <span data-i18n="eduExp.education.umschulung.school">Kolping-Bildungswerk Ostbayern – Weiden, Germany</span>
                 </div>
-                <ul class="small text-secondary mt-3 mb-0">
-                  <li>Programming: Java, Python, JavaScript (OOP)</li>
-                  <li>Front-End: HTML, CSS, Vue.js, Bootstrap</li>
-                  <li>Back-End: Node.js, .NET Blazor, Django</li>
-                  <li>Databases: SQL, PostgreSQL, data modeling</li>
-                  <li>Software Engineering: Agile/Scrum, SDLC, Testing</li>
-                  <li>Tools &amp; DevOps: Git/GitHub, Docker, Linux/Windows</li>
-                  <li>IT Project Work &amp; 9-month internship</li>
-                </ul>
               </div>
             </article>
           </div>
@@ -379,90 +367,84 @@
 <!-- PROJECTS -->
 <section id="projects" class="section bg-white" data-aos="fade-up">
   <div class="container">
-<!-- Title -->
-<div class="text-center mb-3">
-  <h2 class="section-title mb-0">Projects</h2>
-</div>
+    <!-- Title -->
+    <div class="text-center mb-3">
+      <h2 class="section-title mb-0" data-i18n="projects.title">Projects</h2>
+    </div>
 
-<p class="text-secondary text-center">
-  A selection of personal projects and practicals.
-</p>
-
+    <p class="text-secondary text-center" data-i18n="projects.lead">
+      A selection of personal projects and practicals.
+    </p>
 
     <!-- Grid -->
     <div class="row g-4">
-<!-- Project: Java Pong Game -->
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="ratio ratio-16x9">
-      <img src="assets/img/Java-3-Screen-Game-2.jpg"
-           class="card-img-top object-fit-cover"
-           alt="Java Pong game screenshot" loading="lazy" decoding="async">
-    </div>
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title fw-bold">Java Pong Game</h5>
-      <p class="card-text small text-secondary">
-        Developed a classic 2-player Pong game using Java (Swing).  
-        Demonstrates OOP principles, event handling, collision detection,  
-        and a stable game loop.
-      </p>
-      <div class="mt-auto d-flex flex-wrap gap-2">
-        <span class="badge rounded-pill text-bg-light border">Java</span>
-        <span class="badge rounded-pill text-bg-light border">Swing</span>
-        <span class="badge rounded-pill text-bg-light border">OOP</span>
-        <span class="badge rounded-pill text-bg-light border">Game Loop</span>
+
+      <!-- Project: Java Pong Game -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="ratio ratio-16x9">
+            <img src="assets/img/Java-3-Screen-Game-2.jpg"
+                 class="card-img-top object-fit-cover"
+                 alt="Java Pong game screenshot" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold" data-i18n="projects.items.pong.title">Java Pong Game</h5>
+            <p class="card-text small text-secondary" data-i18n="projects.items.pong.desc">
+              Developed a classic 2-player Pong game using Java (Swing).
+              Demonstrates OOP principles, event handling, collision detection,
+              and a stable game loop.
+            </p>
+            <div class="mt-auto d-flex flex-wrap gap-2">
+              <span class="badge rounded-pill text-bg-light border">Java</span>
+              <span class="badge rounded-pill text-bg-light border">Swing</span>
+              <span class="badge rounded-pill text-bg-light border">OOP</span>
+              <span class="badge rounded-pill text-bg-light border">Game Loop</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex gap-2">
+            <a class="btn btn-sm btn-outline-dark" 
+               href="https://github.com/your-user/java-pong-game" 
+               target="_blank" rel="noopener">
+              <i class="bi bi-github me-1"></i> <span data-i18n="projects.items.pong.codeBtn">Code</span>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="card-footer bg-white border-0 d-flex gap-2">
-      <a class="btn btn-sm btn-outline-dark" 
-         href="https://github.com/your-user/java-pong-game" 
-         target="_blank" rel="noopener">
-        <i class="bi bi-github me-1"></i> Code
-      </a>
-    </div>
-  </div>
-</div>
-<!-- Project: Shopify E‑commerce -->
-<div class="col-12 col-md-6 col-lg-4">
-  <div class="card h-100 shadow-sm border-0">
-    <div class="ratio ratio-16x9">
-      <!-- vendos një screenshot të dyqanit; ose përdor një placeholder -->
-      <img src="assets/img/shopify-store.jpg"
-           class="card-img-top object-fit-cover"
-           alt="Shopify e‑commerce storefront screenshot" loading="lazy" decoding="async">
-    </div>
 
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title fw-bold">Shopify E‑commerce Store</h5>
-      <p class="card-text small text-secondary">
-        Built and customized a Shopify storefront: theme tweaks (Liquid, CSS/JS),
-        product collections, checkout flow, and essential app integrations. Role: store setup,
-        UI customization & performance basics.
-      </p>
-
-      <div class="mt-auto d-flex flex-wrap gap-2">
-        <span class="badge rounded-pill text-bg-light border">Shopify</span>
-        <span class="badge rounded-pill text-bg-light border">Liquid</span>
-        <span class="badge rounded-pill text-bg-light border">Theme Customization</span>
-        <span class="badge rounded-pill text-bg-light border">E‑commerce</span>
+      <!-- Project: Shopify E-commerce -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="ratio ratio-16x9">
+            <img src="assets/img/shopify-store.jpg"
+                 class="card-img-top object-fit-cover"
+                 alt="Shopify e-commerce storefront screenshot" loading="lazy" decoding="async">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold" data-i18n="projects.items.shopify.title">Shopify E-commerce Store</h5>
+            <p class="card-text small text-secondary" data-i18n="projects.items.shopify.desc">
+              Built and customized a Shopify storefront: theme tweaks (Liquid, CSS/JS),
+              product collections, checkout flow, and essential app integrations. Role: store setup,
+              UI customization & performance basics.
+            </p>
+            <div class="mt-auto d-flex flex-wrap gap-2">
+              <span class="badge rounded-pill text-bg-light border">Shopify</span>
+              <span class="badge rounded-pill text-bg-light border">Liquid</span>
+              <span class="badge rounded-pill text-bg-light border">Theme Customization</span>
+              <span class="badge rounded-pill text-bg-light border">E-commerce</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 d-flex gap-2">
+            <a class="btn btn-sm btn-brand"
+               href="https://gentigroup-electronic.com/"
+               target="_blank" rel="noopener" data-i18n="projects.items.shopify.liveBtn">
+              Live
+            </a>
+            <a class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true" data-i18n="projects.items.shopify.codeBtn">
+              Code
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="card-footer bg-white border-0 d-flex gap-2">
-      <a class="btn btn-sm btn-brand"
-         href="https://gentigroup-electronic.com/"
-         target="_blank" rel="noopener">
-        Live
-      </a>
-
-      <!-- Nëse nuk ke repo publik, lëre disabled; përndryshe vendos URL-në e GitHub -->
-      <a class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true">
-        Code
-      </a>
-    </div>
-  </div>
-</div>
-
 
       <!-- Project 3 -->
       <div class="col-12 col-md-6 col-lg-4">
@@ -472,9 +454,9 @@
                  alt="Screenshot of Project Three" loading="lazy" decoding="async">
           </div>
           <div class="card-body d-flex flex-column">
-            <h5 class="card-title">Mobile App (Template)</h5>
-            <p class="card-text small text-secondary">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad molestias voluptate recusandae facilis cum perspiciatis labore reprehenderit quia voluptatum, incidunt rem doloremque perferendis, hic velit impedit. Tempore, dignissimos incidunt. Dignissimos!
+            <h5 class="card-title" data-i18n="projects.items.mobile.title">Mobile App (Template)</h5>
+            <p class="card-text small text-secondary" data-i18n="projects.items.mobile.desc">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad molestias voluptate recusandae facilis cum perspiciatis labore reprehenderit quia voluptatum, incidunt rem doloremque perferendis, hic velit impedit.
             </p>
             <div class="mt-auto d-flex flex-wrap gap-2">
               <span class="badge rounded-pill text-bg-light border">Vue.js</span>
@@ -482,8 +464,8 @@
             </div>
           </div>
           <div class="card-footer bg-white d-flex gap-2">
-            <a class="btn btn-sm btn-brand disabled" aria-disabled="true">Demo</a>
-            <a class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true">Code</a>
+            <a class="btn btn-sm btn-brand disabled" aria-disabled="true" data-i18n="projects.items.mobile.demoBtn">Demo</a>
+            <a class="btn btn-sm btn-outline-secondary disabled" aria-disabled="true" data-i18n="projects.items.mobile.codeBtn">Code</a>
           </div>
         </div>
       </div>
@@ -492,16 +474,17 @@
   </div>
 </section>
 
+
 <!-- ===== CONTACT (Glass · Pro) ===== -->
 <section id="contact" class="contact-pro section">
   <div class="container">
     <div class="text-center">
-      <span class="contact-kicker">Let’s work together</span> 
-      <h2 class="contact-title">Get In Touch</h2> <br>  
-      <p class="contact-lead">
-        I am open to career opportunities, freelance projects, and professional collaborations.   <br>
+      <span class="contact-kicker" data-i18n="contact.kicker">Let’s work together</span> 
+      <h2 class="contact-title" data-i18n="contact.title">Get In Touch</h2><br>
+      <p class="contact-lead" data-i18n="contact.leadHtml">
+        I am open to career opportunities, freelance projects, and professional collaborations. <br>
         Based in Weiden, Germany. <br> I focus on delivering modern, efficient, and reliable software solutions.
-      </p> <br>
+      </p><br>
     </div>
 
     <!-- Ambient blobs -->
@@ -512,12 +495,12 @@
       <!-- Left: Contact Info -->
       <div class="col-12 col-lg-5">
         <article class="glass-card h-100">
-          <h5 class="glass-title">Contact Information</h5>
+          <h5 class="glass-title" data-i18n="contact.info.title">Contact Information</h5>
           <ul class="contact-list">
             <li>
               <span class="ci"><i class="bi bi-envelope-fill"></i></span>
               <div>
-                <div class="label">Email</div>
+                <div class="label" data-i18n="contact.info.email">Email</div>
                 <a href="mailto:xhuljansadiku@gmail.com">xhuljansadiku@gmail.com</a>
               </div>
             </li>
@@ -542,8 +525,8 @@
             <li>
               <span class="ci"><i class="bi bi-geo-alt"></i></span>
               <div>
-                <div class="label">Location</div>
-                <span>Weiden, Germany</span>
+                <div class="label" data-i18n="contact.info.location">Location</div>
+                <span data-i18n="contact.info.locationVal">Weiden, Germany</span>
               </div>
             </li>
           </ul>
@@ -552,7 +535,7 @@
 
           <div class="status">
             <span class="dot"></span>
-            <span>Actively seeking full-time employment and open to freelance collaborations</span>
+            <span data-i18n="contact.info.status">Actively seeking full-time employment and open to freelance collaborations</span>
           </div>
         </article>
       </div>
@@ -560,28 +543,36 @@
       <!-- Right: Message Form (visual / no backend) -->
       <div class="col-12 col-lg-7">
         <article class="glass-card h-100">
-          <h5 class="glass-title">Send Me a Message</h5>
+          <h5 class="glass-title" data-i18n="contact.form.title">Send Me a Message</h5>
 
           <form class="row g-3">
             <div class="col-md-6">
-              <label class="form-label">Full Name <span class="req">*</span></label>
-              <input type="text" class="form-control form-glass" placeholder="Your full name">
+              <label class="form-label" data-i18n="contact.form.nameLabel">Full Name <span class="req">*</span></label>
+              <input type="text" class="form-control form-glass"
+                     placeholder="Your full name"
+                     data-i18n="contact.form.namePh" data-i18n-attr="placeholder">
             </div>
             <div class="col-md-6">
-              <label class="form-label">Email Address <span class="req">*</span></label>
-              <input type="email" class="form-control form-glass" placeholder="you@example.com">
+              <label class="form-label" data-i18n="contact.form.emailLabel">Email Address <span class="req">*</span></label>
+              <input type="email" class="form-control form-glass"
+                     placeholder="you@example.com"
+                     data-i18n="contact.form.emailPh" data-i18n-attr="placeholder">
             </div>
             <div class="col-12">
-              <label class="form-label">Subject <span class="req">*</span></label>
-              <input type="text" class="form-control form-glass" placeholder="Regarding job opportunities or collaborations">
+              <label class="form-label" data-i18n="contact.form.subjectLabel">Subject <span class="req">*</span></label>
+              <input type="text" class="form-control form-glass"
+                     placeholder="Regarding job opportunities or collaborations"
+                     data-i18n="contact.form.subjectPh" data-i18n-attr="placeholder">
             </div>
             <div class="col-12">
-              <label class="form-label">Message <span class="req">*</span></label>
-              <textarea rows="5" class="form-control form-glass" placeholder="Your detailed message here..."></textarea>
+              <label class="form-label" data-i18n="contact.form.msgLabel">Message <span class="req">*</span></label>
+              <textarea rows="5" class="form-control form-glass"
+                        placeholder="Your detailed message here..."
+                        data-i18n="contact.form.msgPh" data-i18n-attr="placeholder"></textarea>
             </div>
             <div class="col-12">
               <button type="button" class="btn btn-gradient w-100 d-inline-flex align-items-center justify-content-center gap-2">
-                <i class="bi bi-send"></i> <span>Send Message</span>
+                <i class="bi bi-send"></i> <span data-i18n="contact.form.cta">Send Message</span>
               </button>
             </div>
           </form>
@@ -632,6 +623,293 @@
     if (!nav) return;
     nav.classList.toggle('scrolled', window.scrollY > 10);
   });
+</script>
+
+
+<script>
+const translations = {
+  en: { nav:{ language:"Language", about:"About", skills:"Skills", eduExp:"Education & Experience", projects:"Projects", contact:"Contact" },
+        hero: {
+            titleHtml: "Hi, I’m Xhuljan Sadiku",
+            subtitle: "Software Developer",
+            description: "I craft modern, scalable and user-focused applications. With a background in front-end development and application engineering, I focus on clean code, maintainable architectures and delivering seamless user experiences. Passionate about solving problems, learning new technologies and turning ideas into business-ready solutions.",
+            contactBtn: "Contact",
+            downloadBtn: "Download CV"
+          },
+          skills: {
+          title:"Skills",
+          techMatrix:"Tech Matrix",
+          experienced:"Experienced",
+          familiar:"Familiar With",
+          softTitle:"Soft Skills & Tools",
+          items:{
+            javascript:"JavaScript", html5:"HTML5", css3:"CSS3", vue:"Vue.js",
+            bootstrap:"Bootstrap", postgresql:"PostgreSQL", sql:"SQL",
+            git:"Git / GitHub", java:"Java", python:"Python", node:"Node.js",
+            dotnet:".NET Core", django:"Django", docker:"Docker", shopify:"Shopify"
+          }
+        },
+          soft:{ communication:"Communication", teamwork:"Teamwork", time:"Time Management", problem:"Problem‑Solving", adaptability:"Adaptability" },
+
+          eduExp: {
+            experienceTitle: "Experience",
+            educationTitle: "Education",
+            jobs: {
+              job1: {
+                title: "Application Development Intern",
+                company: "Janner Waagen GmbH – Weiden, Germany",
+                point1: "Enhanced internal web apps using Vue.js & Bootstrap",
+                point2: "Created and optimized reports & queries with SQL/PostgreSQL",
+                point3: "Worked hands-on with Git/GitHub and Docker",
+                point4: "Supported Agile sprints, testing, and QA"
+              },
+              job2: {
+                title: "Application Development Intern",
+                company: "Ziegler Group GmbH – Plößberg, Germany",
+                point1: "Contributed to Vue.js & .NET Blazor projects",
+                point2: "Participated in Agile Scrum: stand-ups & sprint planning",
+                point3: "Developed and integrated REST APIs",
+                point4: "Developed dashboards for system performance monitoring"
+              },
+              job3: {
+                title: "Administrator / IT Support",
+                company: "Ecolog Deutschland GmbH – Weiden",
+                point1: "Managed administrative tasks and digital data systems",
+                point2: "Provided IT support and maintained technical documentation",
+                point3: "Coordinated teams and supported COVID-19 operations"
+              }
+            },
+            education: {
+              bootcamp: {
+                title: "Bootcamp – Full-Stack Development",
+                school: "Per Programera – Online"
+              },
+              umschulung: {
+                title: "Retraining - IT Specialist Application Development",
+                school: "Kolping-Bildungswerk Ostbayern – Weiden, Germany"
+              }
+            }
+          },
+          projects: {
+            title: "Projects",
+            lead: "A selection of personal projects and practicals.",
+            items: {
+              pong: {
+                title: "Java Pong Game",
+                desc: "Developed a classic 2-player Pong game using Java (Swing). Demonstrates OOP principles, event handling, collision detection, and a stable game loop.",
+                codeBtn: "Code"
+              },
+              shopify: {
+                title: "Shopify E-commerce Store",
+                desc: "Built and customized a Shopify storefront: theme tweaks (Liquid, CSS/JS), product collections, checkout flow, and essential app integrations. Role: store setup, UI customization & performance basics.",
+                liveBtn: "Live",
+                codeBtn: "Code"
+              },
+              mobile: {
+                title: "Mobile App (Template)",
+                desc: "Demo placeholder text describing a mobile application project.",
+                demoBtn: "Demo",
+                codeBtn: "Code"
+              }
+            }
+          },
+          contact: {
+  kicker: "Let’s work together",
+  title: "Get In Touch",
+  leadHtml: "I am open to career opportunities, freelance projects, and professional collaborations. Based in Weiden, Germany.  I focus on delivering modern, efficient, and reliable software solutions.",
+  info: {
+    title: "Contact Information",
+    email: "Email",
+    location: "Location",
+    locationVal: "Weiden, Germany",
+    status: "Actively seeking full-time employment and open to freelance collaborations"
+  },
+  form: {
+    title: "Send Me a Message",
+    nameLabel: "Full Name *",
+    namePh: "Your full name",
+    emailLabel: "Email Address *",
+    emailPh: "you@example.com",
+    subjectLabel: "Subject *",
+    subjectPh: "Regarding job opportunities or collaborations",
+    msgLabel: "Message *",
+    msgPh: "Your detailed message here...",
+    cta: "Send Message"
+  }
+},
+},
+  de: {
+  nav: {
+    language: "Sprache",
+    about: "Über mich",
+    skills: "Fähigkeiten",
+    eduExp: "Ausbildung & Erfahrung",
+    projects: "Projekte",
+    contact: "Kontakt"
+  },
+
+  hero: {
+    // lëre pa HTML sepse setLanguage përdor .textContent
+    titleHtml: "Hallo, ich bin Xhuljan Sadiku",
+    subtitle: "Softwareentwickler",
+    description: "Ich entwickle moderne, skalierbare und benutzerzentrierte Anwendungen. Mit Erfahrung in der Frontend-Entwicklung und Anwendungsarchitektur lege ich Wert auf sauberen Code, wartbare Strukturen und nahtlose Benutzererlebnisse. Ich löse gern Probleme, lerne neue Technologien und verwandle Ideen in marktreife Lösungen.",
+    contactBtn: "Kontakt",
+    downloadBtn: "Lebenslauf herunterladen"
+  },
+
+  skills: {
+    title: "Fähigkeiten",
+    techMatrix: "Tech‑Matrix",
+    experienced: "Erfahren",
+    familiar: "Vertraut mit",
+    softTitle: "Soft Skills & Tools",
+    items: {
+      javascript: "JavaScript",
+      html5: "HTML5",
+      css3: "CSS3",
+      vue: "Vue.js",
+      bootstrap: "Bootstrap",
+      postgresql: "PostgreSQL",
+      sql: "SQL",
+      git: "Git / GitHub",
+      java: "Java",
+      python: "Python",
+      node: "Node.js",
+      dotnet: ".NET Core",
+      django: "Django",
+      docker: "Docker",
+      shopify: "Shopify"
+    }
+  },
+
+  soft: {
+    communication: "Kommunikation",
+    teamwork: "Teamarbeit",
+    time: "Zeitmanagement",
+    problem: "Problemlösung",
+    adaptability: "Anpassungsfähigkeit"
+  },
+
+  eduExp: {
+    experienceTitle: "Berufserfahrung",
+    educationTitle: "Ausbildung",
+    jobs: {
+      job1: {
+        title: "Praktikant Anwendungsentwicklung",
+        company: "Janner Waagen GmbH – Weiden, Deutschland",
+        point1: "Interne Webanwendungen mit Vue.js & Bootstrap verbessert",
+        point2: "Reports und SQL/PostgreSQL‑Abfragen erstellt und optimiert",
+        point3: "Praxis mit Git/GitHub und Docker",
+        point4: "Agile Sprints, Testing und QA unterstützt"
+      },
+      job2: {
+        title: "Praktikant Anwendungsentwicklung",
+        company: "Ziegler Group GmbH – Plößberg, Deutschland",
+        point1: "Mitarbeit an Vue.js‑ und .NET‑Blazor‑Projekten",
+        point2: "Teilnahme an Agile‑Scrum (Daily Stand‑ups & Sprint‑Planung)",
+        point3: "REST‑APIs entwickelt und integriert",
+        point4: "Dashboards zur Systemüberwachung umgesetzt"
+      },
+      job3: {
+        title: "Administrator / IT‑Support",
+        company: "Ecolog Deutschland GmbH – Weiden",
+        point1: "Administrative Aufgaben und digitale Datensysteme verwaltet",
+        point2: "IT‑Support geleistet und technische Dokumentation gepflegt",
+        point3: "Teams koordiniert und COVID‑19‑Einsätze unterstützt"
+      }
+    },
+    education: {
+      bootcamp: {
+        title: "Bootcamp – Full‑Stack‑Entwicklung",
+        school: "Per Programera – Online"
+      },
+      umschulung: {
+        title: "Umschulung – Fachinformatiker Anwendungsentwicklung",
+        school: "Kolping‑Bildungswerk Ostbayern – Weiden, Deutschland"
+      }
+    }
+  },
+
+  projects: {
+    title: "Projekte",
+    lead: "Eine Auswahl persönlicher Projekte und Übungen.",
+    items: {
+      pong: {
+        title: "Java‑Pong‑Spiel",
+        desc: "Klassisches Pong für zwei Spieler mit Java (Swing). Zeigt OOP‑Prinzipien, Event‑Handling, Kollisionserkennung und eine stabile Game‑Loop.",
+        codeBtn: "Code"
+      },
+      shopify: {
+        title: "Shopify‑E‑Commerce‑Shop",
+        desc: "Aufbau und Anpassung eines Shopify‑Shops: Theme‑Tweaks (Liquid, CSS/JS), Produktkollektionen, Checkout‑Flow und zentrale App‑Integrationen. Rolle: Shop‑Setup, UI‑Anpassung & Performance‑Basics.",
+        liveBtn: "Live",
+        codeBtn: "Code"
+      },
+      mobile: {
+        title: "Mobile App (Vorlage)",
+        desc: "Platzhaltertext zur Beschreibung eines mobilen App‑Projekts.",
+        demoBtn: "Demo",
+        codeBtn: "Code"
+      }
+    }
+  },
+
+  contact: {
+    kicker: "Lass uns zusammenarbeiten",
+    title: "Kontakt aufnehmen",
+    // lëre pa <br> që të jetë në një fjali të pastër
+    leadHtml: "Ich bin offen für Karrierechancen, freiberufliche Projekte und professionelle Kooperationen. Ansässig in Weiden, Deutschland. Ich liefere moderne, effiziente und zuverlässige Softwarelösungen.",
+    info: {
+      title: "Kontaktinformationen",
+      email: "E‑Mail",
+      location: "Standort",
+      locationVal: "Weiden, Deutschland",
+      status: "Aktiv auf Jobsuche und offen für freiberufliche Zusammenarbeit"
+    },
+    form: {
+      title: "Schreib mir eine Nachricht",
+      nameLabel: "Vollständiger Name *",
+      namePh: "Dein vollständiger Name",
+      emailLabel: "E‑Mail‑Adresse *",
+      emailPh: "du@beispiel.de",
+      subjectLabel: "Betreff *",
+      subjectPh: "Bezüglich Jobchancen oder Kooperationen",
+      msgLabel: "Nachricht *",
+      msgPh: "Deine ausführliche Nachricht …",
+      cta: "Nachricht senden"
+    }
+  },
+
+ 
+  }
+};
+
+
+
+function setLanguage(lang) {
+  const dict = translations[lang] || translations.en;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n").split(".");
+    let val = dict;
+    key.forEach(k=>val=val?.[k]);
+    if(typeof val==="string") el.textContent = val;
+  });
+  localStorage.setItem("lang",lang);
+}
+
+function initLanguage(){
+  const saved = localStorage.getItem("lang") || "en";
+  setLanguage(saved);
+}
+
+document.addEventListener("click", e=>{
+  const btn = e.target.closest(".lang-switch");
+  if(!btn) return;
+  e.preventDefault();
+  setLanguage(btn.dataset.lang);
+});
+
+document.addEventListener("DOMContentLoaded", initLanguage);
 </script>
 
 
